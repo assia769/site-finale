@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion Admin - bovins auction</title>
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+    <div class="login-box">
+        <div class="login-header">
+            <header> <h4>Connexion Admin</h4></header>
+            <img src="images/jibal.png" alt="Logo Jibal" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="login.html">Admin</a></li>
+                    <li><a href="taureaux.html">Nos Taureaux</a></li>
+                    <li><a href="concept.html">Notre concept </a></li>
+    
+                </ul>
+            </nav>
+        </div>
+        <form id="loginForm" action="admin.html" method="post">
+            <div class="input-box">
+                <input type="text" id="username" name="username" class="input-field" placeholder="Nom d'utilisateur" required>
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" name="password" class="input-field" placeholder="Mot de passe" required>
+            </div>
+            <div class="input-submit">
+                <button class="submit-btn" type="submit">Se connecter</button>
+            </div>
+        </form>
+        <div class="forgot">
+            <section>
+                <input type="checkbox" id="check">
+                <label for="check">Se souvenir de moi</label>
+            </section>
+            <section>
+                <a href="#">Mot de passe oublié</a>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username !== 'Mohammed nebgui' || password !== '2024') {
+                event.preventDefault();
+                alert('Nom d\'utilisateur ou mot de passe incorrect (ou bien vous n\'êtes pas admin de ce site)');
+            }
+        });
+    </script>
+</body>
+</html>

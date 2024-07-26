@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - bovins auction</title>
+  <link rel="stylesheet" href="styles/admin.css">
+</head>
+<body>
+  <header>
+    <img src="images/jibal.png" alt="Logo Jibal" class="logo">
+    <h1>Page Admin:</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="login.html">Admin</a></li>
+        <li><a href="taureaux.html">Nos Taureaux</a></li>
+        <li><a href="concept.html">Notre concept </a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Ajouter un Taureau:</h2>
+      <form id="add-bull-form">
+        <label for="photo">Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+        <label for="numero">Numéro:</label>
+        <input type="text" id="numero" name="numero" required>
+        <label for="gendre">Gendre:</label>
+        <input type="text" id="gendre" name="gendre" required>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        <button type="submit">Ajouter</button>
+      </form>
+      <p id="message"></p>
+    </section>
+    <section>
+      <h2>Liste des Taureaux</h2>
+      <ul id="bull-list"></ul>
+    </section>
+    <section>
+      <h2>Suggestions de prix</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Numéro de Taureau</th>
+            <th>Nom</th>
+            <th>Téléphone</th>
+            <th>Prix Suggéré (MAD)</th>
+            <th>Date</th>
+            <th>Supprimer</th>
+          </tr>
+        </thead>
+        <tbody id="suggestions-table"></tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Jibal. Tous droits réservés.</p>
+  </footer>
+  <script src="scripts/admin.js"></script>
+</body>
+</html>
